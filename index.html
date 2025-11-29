@@ -124,6 +124,8 @@
       font-size: 1.1rem;
       margin: 0 6px;
       color: rgba(255,255,255,0.95);
+      white-space: nowrap;
+      display: inline-block;
     }
     .author-block a {
       color: #fbbf24;
@@ -803,15 +805,19 @@
       transform: scale(1.2);
     }
 
-    /* Responsive */
+    /* Responsive - Tablet */
     @media screen and (max-width: 768px) {
       .title.is-2.publication-title { 
         font-size: 1.4rem; 
       }
       .author-block { 
         font-size: 0.9rem; 
-        display: block; 
-        margin: 3px 0; 
+        display: inline; 
+        margin: 0 4px;
+        white-space: nowrap;
+      }
+      .publication-authors br {
+        display: none;
       }
       .hero-body {
         padding-top: 1rem;
@@ -828,6 +834,100 @@
       }
       .section {
         padding: 2rem 1rem;
+      }
+    }
+
+    /* Responsive - Mobile Phone */
+    @media screen and (max-width: 480px) {
+      .title.is-2.publication-title { 
+        font-size: 1.1rem;
+        line-height: 1.4;
+      }
+      .author-block { 
+        font-size: 0.8rem; 
+        margin: 0 2px;
+        white-space: nowrap;
+      }
+      .publication-authors br {
+        display: none;
+      }
+      .affiliation-block {
+        font-size: 0.9rem !important;
+        flex-wrap: wrap;
+      }
+      .affiliation-block img {
+        height: 1.5em !important;
+      }
+      .correspondence {
+        font-size: 0.75rem;
+      }
+      .hero-body {
+        padding: 0.8rem 0.5rem;
+      }
+      .section {
+        padding: 1.5rem 0.8rem;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+      .section-title::after {
+        width: 40px;
+        height: 3px;
+      }
+      .button.is-dark.is-rounded {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+      }
+      .publication-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+      .link-block {
+        margin: 0 !important;
+      }
+      .abstract-container {
+        padding: 1rem;
+      }
+      .stat-card {
+        padding: 0.8rem 1rem;
+      }
+      .stat-number {
+        font-size: 1.5rem;
+      }
+      .stat-label {
+        font-size: 0.8rem;
+      }
+      .category-card {
+        padding: 1rem;
+      }
+      .category-card h4 {
+        font-size: 1rem;
+      }
+      .results-table th,
+      .results-table td {
+        padding: 0.5rem 0.4rem;
+        font-size: 0.7rem;
+      }
+      .bibtex-container code {
+        font-size: 0.7rem;
+      }
+      .copy-btn {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+      }
+      .debate-demo-container {
+        padding: 1rem;
+      }
+      .debater-card {
+        padding: 0.8rem;
+      }
+      .algorithm-container {
+        padding: 1rem;
+      }
+      .navbar-brand .navbar-item {
+        font-size: 1rem;
       }
     }
 
@@ -1615,7 +1715,7 @@
             <a class="navbar-item" href="https://arxiv.org/abs/2406.06144" target="_blank">
               <strong>Language Models Resist Alignment</strong>&nbsp;(ACL 2025 Best Paper)
             </a>
-            <a class="navbar-item" href="https://arxiv.org/pdf/2505.18531" target="_blank">
+            <a class="navbar-item" href="https://generative-rlhf-v.github.io/" target="_blank">
               <strong>Generative RLHF-V</strong>&nbsp;(NeurIPS 2025 Spotlight)
             </a>
             <a class="navbar-item" href="https://pku-intermt.github.io/" target="_blank">
@@ -1646,15 +1746,15 @@
             Debate with Images: Detecting Deceptive Behaviors in Multimodal Large Language Models
           </h1>
           
-          <div class="is-size-6 publication-authors" style="margin-top: 0.8rem;">
-            <span class="author-block"><a href="#">Sitong Fang</a></span>,
-            <span class="author-block"><a href="#">Shiyi Hou</a></span>,
-            <span class="author-block"><a href="#">Kaile Wang</a></span>,
-            <span class="author-block"><a href="#">Boyuan Chen</a></span>,
-            <span class="author-block"><a href="#">Donghai Hong</a></span>,<br>
-            <span class="author-block"><a href="#">Jiayi Zhou</a></span>,
-            <span class="author-block"><a href="#">Josef Dai</a></span>,
-            <span class="author-block"><a href="#">Yaodong Yang</a><sup>†</sup></span>,
+          <div class="is-size-6 publication-authors" style="margin-top: 0.8rem; line-height: 2;">
+            <span class="author-block"><a href="#">Sitong Fang</a>,</span>
+            <span class="author-block"><a href="#">Shiyi Hou</a>,</span>
+            <span class="author-block"><a href="#">Kaile Wang</a>,</span>
+            <span class="author-block"><a href="#">Boyuan Chen</a>,</span>
+            <span class="author-block"><a href="#">Donghai Hong</a>,</span><br>
+            <span class="author-block"><a href="#">Jiayi Zhou</a>,</span>
+            <span class="author-block"><a href="#">Josef Dai</a>,</span>
+            <span class="author-block"><a href="#">Yaodong Yang</a><sup>†</sup>,</span>
             <span class="author-block"><a href="#">Jiaming Ji</a><sup>†</sup></span>
           </div>
 
